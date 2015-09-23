@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-OA-RMH">
-                                <rect key="frame" x="20" y="79" width="560" height="436.5"/>
+                                <rect key="frame" x="20" y="81" width="560" height="492.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqy-ZO-aEZ">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -49,6 +49,10 @@
                                             <outletCollection property="gestureRecognizers" destination="Cav-hh-UWq" appends="YES" id="hUH-g0-Yh2"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="cBy-Cy-zwj" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448.5" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="mJI-uv-Qft" firstAttribute="leading" secondItem="wgg-OA-RMH" secondAttribute="leading" id="YVC-Xa-2c3"/>
