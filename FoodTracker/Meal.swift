@@ -19,7 +19,7 @@ class Meal{
     
     //MARK: Initialization
     
-    init?(name: String, photo: UIImage, rating: Int){
+    init?(name: String, photo: UIImage?, rating: Int) {
         
         // Initialize stored properties
         self.name = name
