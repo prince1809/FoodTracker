@@ -73,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-OA-RMH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-OA-RMH">
                                 <rect key="frame" x="20" y="81" width="560" height="418"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-uv-Qft">
@@ -105,21 +105,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wgg-OA-RMH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MTa-fe-NWe"/>
-                            <constraint firstItem="wgg-OA-RMH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="NxJ-5a-2gL"/>
+                            <constraint firstItem="wgg-OA-RMH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="NxJ-5a-2gL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wgg-OA-RMH" secondAttribute="trailing" id="coy-JA-n1H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="eNT-X8-oTM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gby-q3-55p"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="feO-NY-JpM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="feO-NY-JpM">
+                            <connections>
+                                <segue destination="vhH-d2-07T" kind="unwind" unwindAction="unwindToMealList:" id="EN5-65-ACj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="mJI-uv-Qft" id="pJ9-WE-xe4"/>
                         <outlet property="photoImageView" destination="HEu-v4-d9n" id="IaK-eI-nm9"/>
                         <outlet property="ratingControl" destination="cBy-Cy-zwj" id="lp7-Nz-FK7"/>
+                        <outlet property="saveButton" destination="feO-NY-JpM" id="ks8-tW-r9p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="vhH-d2-07T" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="Cav-hh-UWq">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="c37-as-f86"/>
